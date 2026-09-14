@@ -7,11 +7,12 @@ Conventions: blue = hard-coded input, black = formula, green = link to another
 sheet. Interest is computed on opening balances to avoid circularity (a note on
 the Inputs sheet explains how to switch to average balances in Excel).
 """
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 import pandas as pd
-from openpyxl import Workbook
 from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter as L
-from openpyxl.worksheet.properties import PageSetupProperties
+from ibkit.style import (Book, THEMES, F_INPUT, F_FORMULA, F_LINK, F_TEXT, F_BOLD, F_NOTE, NUM, PCT, TOTAL_BORDER, recalc, export_pdf, preview_png)
 
 # --------------------------------------------------------------------------- #
 # Historical data (US$ billions) from Apple 10-K filings via Yahoo Finance pull
@@ -57,27 +58,13 @@ for y in HIST:
         shares_end=h(BS, "Ordinary Shares Number", y),
     )
 
-# --------------------------------------------------------------------------- #
-# Styles
-# --------------------------------------------------------------------------- #
 FONT = "Arial"
-BLUE, BLACK, GREEN, GREY = "0000FF", "000000", "008000", "808080"
-f_title = Font(name=FONT, size=14, bold=True)
-f_hdr = Font(name=FONT, size=10, bold=True, color="FFFFFF")
-f_sec = Font(name=FONT, size=10, bold=True)
-f_in = Font(name=FONT, size=10, color=BLUE)
-f_fx = Font(name=FONT, size=10, color=BLACK)
-f_ln = Font(name=FONT, size=10, color=GREEN)
-f_note = Font(name=FONT, size=9, italic=True, color=GREY)
-fill_hdr = PatternFill("solid", fgColor="1F4E79")
-fill_sec = PatternFill("solid", fgColor="DDEBF7")
-fill_key = PatternFill("solid", fgColor="FFFF00")
-thin = Side(style="thin", color="BFBFBF")
-top_border = Border(top=Side(style="thin", color="000000"))
-NUM = '#,##0.0;(#,##0.0);"-"'
-PCT = '0.0%;(0.0%);"-"'
-INT = '#,##0;(#,##0);"-"'
-MULT = '0.00x'
+book = Book(theme=THEMES["apple"], project_no=1, project="Three-Statement Operating Model", company="Apple Inc.",
+            units="US$ billions unless stated", as_of="FY2025 10-K (27 Sep 2025)")
+f_title = Font(name=FONT, size=14, bold=True); f_hdr = book.f_header; f_sec = F_BOLD; f_in = F_INPUT; f_fx = F_FORMULA; f_ln = F_LINK; f_note = F_NOTE
+fill_hdr = book.fill_secondary; fill_sec = book.fill_light; fill_key = book.fill_accent
+top_border = TOTAL_BORDER
+INT = '#,##0;(#,##0);"-"'; MULT = '0.00x'
 
 FY_H = HIST                                    # historical columns in the model
 FY_F = ["2026", "2027", "2028", "2029", "2030"]
@@ -86,45 +73,18 @@ COL0 = 3                                       # column C = first year
 def col(y): return L(COL0 + FY.index(y))
 def colF(y): return L(3 + FY_F.index(y))       # Inputs sheet: forecast years start at column C
 
-wb = Workbook()
-
-# --------------------------------------------------------------------------- #
-# Cover
-# --------------------------------------------------------------------------- #
-ws = wb.active; ws.title = "Cover"
-ws.column_dimensions["A"].width = 3; ws.column_dimensions["B"].width = 34; ws.column_dimensions["C"].width = 90
-ws["B2"] = "Apple Inc. — Three-Statement Operating Model"; ws["B2"].font = f_title
-ws["B3"] = "IB portfolio · Project 1 of 20 · US$ billions unless stated · fiscal years ending late September"; ws["B3"].font = f_note
-rows = [
-    ("Purpose", "Integrated income statement, balance sheet and cash-flow forecast FY2026E–FY2030E driven from an assumptions sheet with Base / Upside / Downside cases."),
-    ("How to use", "Change the scenario in Inputs!C4 (1 = Base, 2 = Upside, 3 = Downside). Edit blue cells only. Every other cell is a formula."),
-    ("Colour code", "Blue = hard-coded input · Black = formula · Green = link to another sheet · Yellow fill = the scenario selector and key levers."),
-    ("Sheets", "Inputs → Historical → Model (IS, BS, CF and schedules) → Checks → Summary."),
-    ("Historicals", "FY2022–FY2025 from Apple's Form 10-K filings (SEC EDGAR, CIK 0000320193), pulled via Yahoo Finance and reconciled to reported totals on the Historical sheet."),
-    ("Simplifications", "Interest on opening balances (no circularity); receivables include vendor non-trade receivables; other current liabilities include accrued expenses, deferred revenue and taxes payable; long-term marketable securities modelled as a run-off input; buybacks charged to retained earnings."),
-    ("Source", "https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&type=10-K"),
-    ("Author", "Jainam Mehta · github.com/jainammehta1215/ib-portfolio"),
-]
-for i, (k, v) in enumerate(rows, start=5):
-    ws.cell(i, 2, k).font = f_sec; c = ws.cell(i, 3, v); c.font = Font(name=FONT, size=10); c.alignment = Alignment(wrap_text=True, vertical="top")
-    ws.row_dimensions[i].height = 30
-
 # --------------------------------------------------------------------------- #
 # Inputs
 # --------------------------------------------------------------------------- #
-wi = wb.create_sheet("Inputs")
-wi.column_dimensions["A"].width = 3; wi.column_dimensions["B"].width = 44
-for j in range(3, 9): wi.column_dimensions[L(j)].width = 12
-wi.column_dimensions["I"].width = 60
-wi["B2"] = "Assumptions"; wi["B2"].font = f_title
+wi = book.sheet("Inputs", ncols=9, label_width=44, subtitle="Assumptions · edit blue cells only · scenario selector in C4")
+wi.column_dimensions["I"].width = 78
 wi["B4"] = "Scenario selector (1 Base · 2 Upside · 3 Downside)"; wi["B4"].font = f_sec
-wi["C4"] = 1; wi["C4"].font = Font(name=FONT, size=11, bold=True, color=BLUE); wi["C4"].fill = fill_key
-wi["D4"] = '=CHOOSE($C$4,"Base","Upside","Downside")'; wi["D4"].font = f_fx
-wi["B5"] = "Interest is computed on opening balances to avoid a circular reference. In Excel you may switch to average balances after enabling File → Options → Formulas → Iterative calculation."; wi["B5"].font = f_note
-wi.merge_cells("B5:I5"); wi.row_dimensions[5].height = 28
+book.key_cell(wi["C4"], 1)
+wi["D4"] = '=CHOOSE($C$4,"Base","Upside","Downside")'; wi["D4"].font = F_BOLD
+book.note(wi, 5, "Interest is computed on opening balances to avoid a circular reference. In Excel you may switch to average balances after enabling File → Options → Formulas → Iterative calculation.", 9)
 
 # single-value inputs
-wi["B7"] = "General inputs"; wi["B7"].font = f_sec; wi["B7"].fill = fill_sec
+book.section(wi, 7, "GENERAL INPUTS", 9)
 single = [
     ("Interest rate on debt", 0.040, PCT, "Blended coupon on Apple's notes; FY2025 interest expense ≈ 3.9% of average debt (10-K)"),
     ("Yield on cash & investments", 0.040, PCT, "Approximate yield on Apple's short- and long-term marketable securities"),
@@ -139,10 +99,9 @@ for i, (k, v, fmt, note) in enumerate(single, start=8):
     SINGLE[k] = f"Inputs!$C${i}"
 
 # scenario driver blocks
-wi["B15"] = "Forecast drivers by scenario (selected row feeds the Model)"; wi["B15"].font = f_sec; wi["B15"].fill = fill_sec
-for j, y in enumerate(FY_F):
-    c = wi.cell(15, 3 + j, f"FY{y}E"); c.font = f_hdr; c.fill = fill_hdr; c.alignment = Alignment(horizontal="center")
-wi.cell(15, 9, "Basis / source").font = f_hdr; wi.cell(15, 9).fill = fill_hdr
+book.section(wi, 14, "FORECAST DRIVERS BY SCENARIO  (the 'Selected' row feeds the Model)", 9)
+book.year_header(wi, 15, [f"FY{y}E" for y in FY_F], first_col=3)
+c = wi.cell(15, 9, "Basis / source"); c.font = f_hdr; c.fill = fill_hdr
 
 drivers = [
     # key, label, fmt, base, upside, downside, note
@@ -175,8 +134,8 @@ DRV = {}                                       # key -> row number of the *selec
 r = 16
 for key, label, fmt, base, up, dn in [(d[0], d[1], d[2], d[3], d[4], d[5]) for d in drivers]:
     note = [d for d in drivers if d[0] == key][0][6]
-    wi.cell(r, 2, label).font = f_sec
-    wi.cell(r, 9, note).font = f_note
+    book.subsection(wi, r, label, 9)
+    c = wi.cell(r, 9, note); c.font = f_note; c.fill = PatternFill(None); c.alignment = Alignment(wrap_text=True, vertical="top")
     for k, (nm, vals) in enumerate([("  Base", base), ("  Upside", up), ("  Downside", dn)], start=1):
         wi.cell(r + k, 2, nm)
         for j, v in enumerate(vals):
@@ -194,18 +153,14 @@ def drv(key, y):                               # reference to the selected drive
 # --------------------------------------------------------------------------- #
 # Historical
 # --------------------------------------------------------------------------- #
-wh = wb.create_sheet("Historical")
-wh.column_dimensions["A"].width = 3; wh.column_dimensions["B"].width = 46
-for j in range(3, 8): wh.column_dimensions[L(j)].width = 12
-wh["B2"] = "Historical financials (US$bn) — Apple 10-K, FY2022–FY2025"; wh["B2"].font = f_title
-wh["B3"] = "Reconciled: every subtotal ties to the reported statements. Receivables = trade + vendor non-trade receivables. 'Other' asset and liability lines are residuals to Apple's reported subtotals (so they include accrued expenses, deferred revenue, taxes payable and lease liabilities)."; wh["B3"].font = f_note
-wh.merge_cells("B3:H3"); wh.row_dimensions[3].height = 28
-for j, y in enumerate(HIST):
-    c = wh.cell(5, 3 + j, f"FY{y}"); c.font = f_hdr; c.fill = fill_hdr; c.alignment = Alignment(horizontal="center")
+wh = book.sheet("Historical", ncols=7, subtitle="Historical financials FY2022–FY2025 from Form 10-K · reconciled to reported subtotals")
+book.note(wh, 3, "Every subtotal ties to the reported statements. Receivables = trade + vendor non-trade receivables. 'Other' asset and liability lines are residuals to Apple's reported subtotals, so they include accrued expenses, deferred revenue, taxes payable and lease liabilities.", 7, height=30)
+book.year_header(wh, 5, [f"FY{y}A" for y in HIST], first_col=3)
 HROW = {}
 def hrow(r, label, key=None, fmt=NUM, bold=False, formula=None, section=False):
-    c = wh.cell(r, 2, label); c.font = f_sec if (bold or section) else Font(name=FONT, size=10)
-    if section: c.fill = fill_sec
+    if section:
+        book.section(wh, r, label.upper(), 7); return r
+    c = wh.cell(r, 2, label); c.font = f_sec if bold else F_TEXT
     for j, y in enumerate(HIST):
         cell = wh.cell(r, 3 + j)
         if formula:
@@ -287,20 +242,17 @@ for lab, fn, fmt in ratio_rows:
 # --------------------------------------------------------------------------- #
 # Model
 # --------------------------------------------------------------------------- #
-wm = wb.create_sheet("Model")
-wm.column_dimensions["A"].width = 3; wm.column_dimensions["B"].width = 46
-for j in range(3, 3 + len(FY)): wm.column_dimensions[L(j)].width = 12
-wm["B2"] = "Integrated model (US$bn)"; wm["B2"].font = f_title
-wm["B3"] = '="Scenario: "&Inputs!$D$4&"   ·   FY2022–FY2025 actual (linked), FY2026E–FY2030E forecast"'; wm["B3"].font = f_note
-for j, y in enumerate(FY):
-    c = wm.cell(5, 3 + j, f"FY{y}" + ("E" if y in FY_F else "A")); c.font = f_hdr; c.fill = fill_hdr; c.alignment = Alignment(horizontal="center")
+wm = book.sheet("Model", ncols=2 + len(FY), subtitle="Integrated income statement, balance sheet, cash flow and schedules · FY2022A–FY2025A linked, FY2026E–FY2030E forecast")
+wm["B3"] = '="Scenario: "&Inputs!$D$4'; wm["B3"].font = Font(name=FONT, size=10, bold=True, color=book.theme.accent)
+book.year_header(wm, 5, [f"FY{y}" + ("E" if y in FY_F else "A") for y in FY], first_col=3)
 M = {}
 
 def mrow(r, label, key, hist_key=None, fc=None, fmt=NUM, bold=False, section=False, hist_formula=None):
     """hist_key: link to Historical sheet for actual years; fc(y, c, p): forecast formula for year y in column c with previous column p."""
     M[key] = r                                  # register first so a row can reference itself (growth, margins)
-    c = wm.cell(r, 2, label); c.font = f_sec if (bold or section) else Font(name=FONT, size=10)
-    if section: c.fill = fill_sec
+    if section:
+        book.section(wm, r, label, 2 + len(FY)); return r
+    c = wm.cell(r, 2, label); c.font = f_sec if bold else F_TEXT
     for y in FY:
         cl = col(y); prev = L(COL0 + FY.index(y) - 1) if FY.index(y) > 0 else None
         cell = wm[f"{cl}{r}"]; cell.number_format = fmt
@@ -428,22 +380,12 @@ for row in wm.iter_rows(min_row=6, max_row=r):
                 v = v.replace("{" + k + "}", str(rr))
             cell.value = v
 
-# freeze panes and print setup
-wm.freeze_panes = "C6"
-for sheet in (wi, wh, wm):
-    sheet.sheet_view.showGridLines = False
-    sheet.page_setup.orientation = "landscape"; sheet.page_setup.fitToWidth = 1; sheet.page_setup.fitToHeight = 0
-    sheet.sheet_properties.pageSetUpPr = PageSetupProperties(fitToPage=True)
 
 # --------------------------------------------------------------------------- #
 # Checks
 # --------------------------------------------------------------------------- #
-wc = wb.create_sheet("Checks")
-wc.column_dimensions["A"].width = 3; wc.column_dimensions["B"].width = 52
-for j in range(3, 3 + len(FY)): wc.column_dimensions[L(j)].width = 12
-wc["B2"] = "Model integrity checks (all should read 0 / TRUE)"; wc["B2"].font = f_title
-for j, y in enumerate(FY):
-    c = wc.cell(4, 3 + j, f"FY{y}"); c.font = f_hdr; c.fill = fill_hdr; c.alignment = Alignment(horizontal="center")
+wc = book.sheet("Checks", ncols=2 + len(FY), label_width=54, subtitle="Model integrity checks · every row should read 0 or TRUE")
+book.year_header(wc, 4, [f"FY{y}" for y in FY], first_col=3)
 checks = [
     ("Balance sheet balances (assets − liabilities − equity)", lambda y, c: f"=Model!{c}{M['bal']}", NUM),
     ("Cash-flow closing cash = balance-sheet cash", lambda y, c: (f"=ROUND(Model!{c}{M['cf_end']}-Model!{c}{M['cash']},3)" if y in FY_F else "=0"), NUM),
@@ -456,20 +398,16 @@ for i, (lab, fn, fmt) in enumerate(checks, start=5):
     wc.cell(i, 2, lab)
     for j, y in enumerate(FY):
         c = wc.cell(i, 3 + j, fn(y, col(y))); c.font = f_fx; c.number_format = fmt
-wc.cell(12, 2, "Overall").font = f_sec
-wc.cell(12, 3, f'=IF(AND(SUMPRODUCT(ABS(C5:{col(FY[-1])}8))<0.01,COUNTIF(C9:{col(FY[-1])}9,FALSE)=0,SUMPRODUCT(ABS(C10:{col(FY[-1])}10))<0.2),"MODEL OK","CHECK ERRORS")').font = Font(name=FONT, size=11, bold=True)
-wc.sheet_view.showGridLines = False
+book.section(wc, 12, "OVERALL", 2 + len(FY))
+c = wc.cell(12, 3, f'=IF(AND(SUMPRODUCT(ABS(C5:{col(FY[-1])}8))<0.01,COUNTIF(C9:{col(FY[-1])}9,FALSE)=0,SUMPRODUCT(ABS(C10:{col(FY[-1])}10))<0.2),"MODEL OK","CHECK ERRORS")')
+c.font = Font(name=FONT, size=11, bold=True, color=book.theme.text_on_primary)
 
 # --------------------------------------------------------------------------- #
 # Summary
 # --------------------------------------------------------------------------- #
-wsu = wb.create_sheet("Summary")
-wsu.column_dimensions["A"].width = 3; wsu.column_dimensions["B"].width = 40
-for j in range(3, 3 + len(FY)): wsu.column_dimensions[L(j)].width = 12
-wsu["B2"] = '="Key outputs — "&Inputs!$D$4&" case (US$bn)"'; wsu["B2"].font = f_title
-wsu["B3"] = "Toggle Inputs!C4 to compare scenarios. Green = link to Model."; wsu["B3"].font = f_note
-for j, y in enumerate(FY):
-    c = wsu.cell(5, 3 + j, f"FY{y}" + ("E" if y in FY_F else "A")); c.font = f_hdr; c.fill = fill_hdr; c.alignment = Alignment(horizontal="center")
+wsu = book.sheet("Summary", ncols=2 + len(FY), label_width=40, subtitle="Key outputs for the selected scenario · toggle Inputs!C4 to compare")
+wsu["B3"] = '="Scenario: "&Inputs!$D$4'; wsu["B3"].font = Font(name=FONT, size=10, bold=True, color=book.theme.accent)
+book.year_header(wsu, 5, [f"FY{y}" + ("E" if y in FY_F else "A") for y in FY], first_col=3)
 summ = [("Revenue", "rev", NUM), ("  growth", "g", PCT), ("Gross margin", "gm", PCT), ("EBIT", "ebit", NUM), ("  EBIT margin", "ebitm", PCT),
         ("Net income", "ni", NUM), ("Diluted EPS (US$)", "eps", '0.00'), ("Free cash flow", "fcf", NUM), ("Shareholder returns", "payout", NUM),
         ("Cash & ST investments", "cash", NUM), ("Total debt incl. revolver", None, NUM), ("Net debt / (net cash)", "netdebt", NUM), ("Shares outstanding (bn)", "sh_end", '#,##0.000')]
@@ -479,9 +417,25 @@ for i, (lab, key, fmt) in enumerate(summ, start=6):
         c = wsu.cell(i, 3 + j); c.number_format = fmt; c.font = f_ln
         if key: c.value = f"=Model!{col(y)}{M[key]}"
         else: c.value = f"=Model!{col(y)}{M['cdebt']}+Model!{col(y)}{M['ltdebt']}+Model!{col(y)}{M['rev_bal']}"
-wsu.sheet_view.showGridLines = False
-wb.move_sheet("Summary", offset=-3)
-
-out = "/home/claude/ib-portfolio/01-apple-three-statement-model/Apple_3S_Model.xlsx"
-import os; os.makedirs(os.path.dirname(out), exist_ok=True)
-wb.save(out); print("saved", out, "| model rows", r)
+book.wb.move_sheet("Summary", offset=-4)
+book.cover(
+    toc=[("Summary", "key outputs for the selected scenario"), ("Inputs", "assumptions, three cases, scenario selector"),
+         ("Historical", "FY2022–FY2025 spread and reconciled to the 10-K, with calibration ratios"),
+         ("Model", "integrated income statement, balance sheet, cash flow, PP&E / debt / revolver / share-count schedules"),
+         ("Checks", "balance, cash tie, schedule ties, minimum cash, historical net income tie")],
+    highlights=[("Revenue FY2030E (US$bn)", f"=Model!{col('2030')}{M['rev']}", NUM), ("Diluted EPS FY2030E (US$)", f"=Model!{col('2030')}{M['eps']}", '0.00'),
+                ("Free cash flow FY2030E (US$bn)", f"=Model!{col('2030')}{M['fcf']}", NUM), ("Net cash FY2030E (US$bn)", f"=-Model!{col('2030')}{M['netdebt']}", NUM),
+                ("Model status", "=Checks!C12", "General")],
+    blurb="An integrated three-statement forecast for Apple, FY2026E–FY2030E, driven from one assumptions sheet with Base, Upside and Downside cases selected in a single cell. The foundation for the DCF (Project 2), the merger model (Project 6) and the LBO (Project 7).",
+    method=["Historicals FY2022–FY2025 spread from Form 10-K and reconciled: every subtotal ties to the reported statements.",
+            "Revenue grows at a scenario rate; margins, opex, tax, D&A, capex and SBC are percentages of revenue; working capital is on days.",
+            "Buybacks are a percentage of free cash flow after dividends, matching Apple's 'net cash neutral' policy; a revolver plugs any shortfall against a US$25bn cash floor.",
+            "Interest on opening balances (no circularity). Share count retires buybacks at an assumed price path. A Checks sheet must read MODEL OK."],
+    sources=["Apple Inc. Form 10-K FY2022–FY2025, SEC EDGAR CIK 0000320193: https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&CIK=0000320193&type=10-K",
+             "Figures pulled via Yahoo Finance and reconciled to reported subtotals; share price for buyback share count ≈ late-September 2025 close."])
+book.finish(freeze={"Model": "C6", "Historical": "C6", "Summary": "C6", "Inputs": "C16"}, repeat_rows={"Model": "1:5", "Historical": "1:5", "Inputs": "1:2"})
+out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "Apple_3S_Model.xlsx")
+book.save(out); print("saved", out, "| model rows", r)
+rc = recalc(out); assert rc.get("status") == "success" and rc.get("total_errors") == 0, rc
+pdf = export_pdf(out); png = preview_png(pdf, 0, dpi=60); os.rename(png, os.path.join(os.path.dirname(out), "cover.png"))
+print("recalc ok · pdf", pdf)

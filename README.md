@@ -9,7 +9,7 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 | # | Project | Company | Region | Status | Files |
 |---|---|---|---|---|---|
 | 1 | Three-statement operating model with scenario toggle | Apple Inc. | Western | ✅ | [Excel](01-apple-three-statement-model/Apple_3S_Model.xlsx) · [PDF](01-apple-three-statement-model/Apple_3S_Model.pdf) · [Notes](01-apple-three-statement-model/notes.md) |
-| 2 | DCF valuation with full WACC build and sensitivities | Apple Inc. | Western | planned | |
+| 2 | DCF valuation with full WACC build and sensitivities | Apple Inc. | Western | ✅ | [Excel](02-apple-dcf/Apple_DCF.xlsx) · [PDF](02-apple-dcf/Apple_DCF.pdf) · [Notes](02-apple-dcf/notes.md) |
 | 3 | Trading comparables engine | TCS vs IT-services peers | Indian | planned | |
 | 4 | Precedent transactions | Technology / IT services | Western · Indian | planned | |
 | 5 | Football field and valuation summary | Apple Inc. | Western | planned | |
@@ -28,6 +28,16 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 | 18 | Restructuring: liquidity, waterfall, debt-for-equity | Documented GCC or US case | UAE · Western | planned | |
 | 19 | Deal-sourcing and comps-refresh dashboard (Python) | DFM, NSE and US universes | All | planned | |
 | 20 | Capstone: live-deal replication | HDFC Bank – HDFC Ltd merger | Indian | planned | |
+
+## Previews
+
+| Project 1 · Apple three-statement model | Project 2 · Apple DCF |
+|---|---|
+| [![P1](01-apple-three-statement-model/cover.png)](01-apple-three-statement-model/Apple_3S_Model.pdf) | [![P2](02-apple-dcf/cover.png)](02-apple-dcf/Apple_DCF.pdf) |
+
+## Design
+
+Every workbook is built with `ibkit/style.py`: a brand palette per company (title bands, section headers, cover sidebar), a designed cover with contents, live key outputs and sources, print headers and footers, fit-to-width on every sheet. Inside the grid the banking convention never changes: blue inputs, black formulas, green links.
 
 ## Conventions
 
