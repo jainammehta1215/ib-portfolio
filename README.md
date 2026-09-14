@@ -14,7 +14,7 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 | 4 | Precedent transactions | IT services deals 2014–2024 | Western · Indian | ✅ | [Excel](04-precedent-transactions/IT_Services_Precedents.xlsx) · [PDF](04-precedent-transactions/IT_Services_Precedents.pdf) · [Notes](04-precedent-transactions/notes.md) |
 | 5 | Football field: eight methods, weighted recommended range, rupee DCF | TCS | Indian | ✅ | [Excel](05-football-field/TCS_Football_Field.xlsx) · [PDF](05-football-field/TCS_Football_Field.pdf) · [Notes](05-football-field/notes.md) |
 | 6 | Merger model: accretion/dilution, synergies, pro forma | Emirates NBD / Mashreqbank (hypothetical) | UAE | ✅ | [Excel](06-uae-bank-merger/ENBD_Mashreq_Merger_Model.xlsx) · [PDF](06-uae-bank-merger/ENBD_Mashreq_Merger_Model.pdf) · [Notes](06-uae-bank-merger/notes.md) |
-| 7 | Leveraged buyout with debt schedule and returns | US large-cap take-private (hypothetical) | Western | planned | |
+| 7 | Leveraged buyout: debt schedule, cash sweep, returns, max-price solve | Cognizant (hypothetical take-private) | Western | ✅ | [Excel](07-cognizant-lbo/Cognizant_LBO.xlsx) · [PDF](07-cognizant-lbo/Cognizant_LBO.pdf) · [Notes](07-cognizant-lbo/notes.md) |
 | 8 | Debt capacity and capital structure | Reliance Industries | Indian | planned | |
 | 9 | IPO valuation and pricing rebuild | DEWA (2022) or Saudi Aramco (2019) | UAE · Gulf | planned | |
 | 10 | Sum-of-the-parts | Reliance Industries | Indian | planned | |
@@ -38,6 +38,10 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 | Project 4 · IT-services precedents | Project 5 · TCS football field | Project 6 · ENBD / Mashreq merger |
 |---|---|---|
 | [![P4](04-precedent-transactions/cover.png)](04-precedent-transactions/IT_Services_Precedents.pdf) | [![P5](05-football-field/cover.png)](05-football-field/TCS_Football_Field.pdf) | [![P6](06-uae-bank-merger/cover.png)](06-uae-bank-merger/ENBD_Mashreq_Merger_Model.pdf) |
+
+| Project 7 · Cognizant LBO | | |
+|---|---|---|
+| [![P7](07-cognizant-lbo/cover.png)](07-cognizant-lbo/Cognizant_LBO.pdf) | | |
 
 ## Design
 
