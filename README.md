@@ -43,6 +43,10 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 |---|---|---|
 | [![P7](07-cognizant-lbo/cover.png)](07-cognizant-lbo/Cognizant_LBO.pdf) | | |
 
+## Guide
+
+[**IB Portfolio, Explained**](guide/IB_Portfolio_Explained.pdf) — a plain-English walkthrough of every project: the vocabulary, what each model does and why, the numbers that came out, and the questions each one invites.
+
 ## Design
 
 Every workbook is built with `ibkit/style.py`: a brand palette per company (title bands, section headers, cover sidebar), a designed cover with contents, live key outputs and sources, print headers and footers, fit-to-width on every sheet. Inside the grid the banking convention never changes: blue inputs, black formulas, green links.
