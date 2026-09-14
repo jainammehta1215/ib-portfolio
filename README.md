@@ -10,7 +10,7 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 |---|---|---|---|---|---|
 | 1 | Three-statement operating model with scenario toggle | Apple Inc. | Western | ✅ | [Excel](01-apple-three-statement-model/Apple_3S_Model.xlsx) · [PDF](01-apple-three-statement-model/Apple_3S_Model.pdf) · [Notes](01-apple-three-statement-model/notes.md) |
 | 2 | DCF valuation with full WACC build and sensitivities | Apple Inc. | Western | ✅ | [Excel](02-apple-dcf/Apple_DCF.xlsx) · [PDF](02-apple-dcf/Apple_DCF.pdf) · [Notes](02-apple-dcf/notes.md) |
-| 3 | Trading comparables engine | TCS vs IT-services peers | Indian | planned | |
+| 3 | Trading comparables engine | TCS vs IT-services peers | Indian | ✅ | [Excel](03-tcs-trading-comps/TCS_Trading_Comps.xlsx) · [PDF](03-tcs-trading-comps/TCS_Trading_Comps.pdf) · [Notes](03-tcs-trading-comps/notes.md) |
 | 4 | Precedent transactions | Technology / IT services | Western · Indian | planned | |
 | 5 | Football field and valuation summary | Apple Inc. | Western | planned | |
 | 6 | Merger model: accretion/dilution, synergies, pro forma | UAE banking consolidation (hypothetical) | UAE | planned | |
@@ -31,9 +31,9 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 
 ## Previews
 
-| Project 1 · Apple three-statement model | Project 2 · Apple DCF |
-|---|---|
-| [![P1](01-apple-three-statement-model/cover.png)](01-apple-three-statement-model/Apple_3S_Model.pdf) | [![P2](02-apple-dcf/cover.png)](02-apple-dcf/Apple_DCF.pdf) |
+| Project 1 · Apple three-statement model | Project 2 · Apple DCF | Project 3 · TCS trading comps |
+|---|---|---|
+| [![P1](01-apple-three-statement-model/cover.png)](01-apple-three-statement-model/Apple_3S_Model.pdf) | [![P2](02-apple-dcf/cover.png)](02-apple-dcf/Apple_DCF.pdf) | [![P3](03-tcs-trading-comps/cover.png)](03-tcs-trading-comps/TCS_Trading_Comps.pdf) |
 
 ## Design
 
