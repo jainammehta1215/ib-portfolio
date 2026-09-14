@@ -11,8 +11,8 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 | 1 | Three-statement operating model with scenario toggle | Apple Inc. | Western | ✅ | [Excel](01-apple-three-statement-model/Apple_3S_Model.xlsx) · [PDF](01-apple-three-statement-model/Apple_3S_Model.pdf) · [Notes](01-apple-three-statement-model/notes.md) |
 | 2 | DCF valuation with full WACC build and sensitivities | Apple Inc. | Western | ✅ | [Excel](02-apple-dcf/Apple_DCF.xlsx) · [PDF](02-apple-dcf/Apple_DCF.pdf) · [Notes](02-apple-dcf/notes.md) |
 | 3 | Trading comparables engine | TCS vs IT-services peers | Indian | ✅ | [Excel](03-tcs-trading-comps/TCS_Trading_Comps.xlsx) · [PDF](03-tcs-trading-comps/TCS_Trading_Comps.pdf) · [Notes](03-tcs-trading-comps/notes.md) |
-| 4 | Precedent transactions | Technology / IT services | Western · Indian | planned | |
-| 5 | Football field and valuation summary | Apple Inc. | Western | planned | |
+| 4 | Precedent transactions | IT services deals 2014–2024 | Western · Indian | ✅ | [Excel](04-precedent-transactions/IT_Services_Precedents.xlsx) · [PDF](04-precedent-transactions/IT_Services_Precedents.pdf) · [Notes](04-precedent-transactions/notes.md) |
+| 5 | Football field and valuation summary | TCS | Indian | planned | |
 | 6 | Merger model: accretion/dilution, synergies, pro forma | UAE banking consolidation (hypothetical) | UAE | planned | |
 | 7 | Leveraged buyout with debt schedule and returns | US large-cap take-private (hypothetical) | Western | planned | |
 | 8 | Debt capacity and capital structure | Reliance Industries | Indian | planned | |
@@ -31,9 +31,9 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 
 ## Previews
 
-| Project 1 · Apple three-statement model | Project 2 · Apple DCF | Project 3 · TCS trading comps |
-|---|---|---|
-| [![P1](01-apple-three-statement-model/cover.png)](01-apple-three-statement-model/Apple_3S_Model.pdf) | [![P2](02-apple-dcf/cover.png)](02-apple-dcf/Apple_DCF.pdf) | [![P3](03-tcs-trading-comps/cover.png)](03-tcs-trading-comps/TCS_Trading_Comps.pdf) |
+| Project 1 · Apple three-statement model | Project 2 · Apple DCF | Project 3 · TCS trading comps | Project 4 · IT-services precedents |
+|---|---|---|---|
+| [![P1](01-apple-three-statement-model/cover.png)](01-apple-three-statement-model/Apple_3S_Model.pdf) | [![P2](02-apple-dcf/cover.png)](02-apple-dcf/Apple_DCF.pdf) | [![P3](03-tcs-trading-comps/cover.png)](03-tcs-trading-comps/TCS_Trading_Comps.pdf) | [![P4](04-precedent-transactions/cover.png)](04-precedent-transactions/IT_Services_Precedents.pdf) |
 
 ## Design
 
