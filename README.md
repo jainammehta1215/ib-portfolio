@@ -12,8 +12,8 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 | 2 | DCF valuation with full WACC build and sensitivities | Apple Inc. | Western | ✅ | [Excel](02-apple-dcf/Apple_DCF.xlsx) · [PDF](02-apple-dcf/Apple_DCF.pdf) · [Notes](02-apple-dcf/notes.md) |
 | 3 | Trading comparables engine | TCS vs IT-services peers | Indian | ✅ | [Excel](03-tcs-trading-comps/TCS_Trading_Comps.xlsx) · [PDF](03-tcs-trading-comps/TCS_Trading_Comps.pdf) · [Notes](03-tcs-trading-comps/notes.md) |
 | 4 | Precedent transactions | IT services deals 2014–2024 | Western · Indian | ✅ | [Excel](04-precedent-transactions/IT_Services_Precedents.xlsx) · [PDF](04-precedent-transactions/IT_Services_Precedents.pdf) · [Notes](04-precedent-transactions/notes.md) |
-| 5 | Football field and valuation summary | TCS | Indian | ✅ | [Excel](05-football-field/TCS_Football_Field.xlsx) · [PDF](05-football-field/TCS_Football_Field.pdf) · [Notes](05-football-field/notes.md) |
-| 6 | Merger model: accretion/dilution, synergies, pro forma | UAE banking consolidation (hypothetical) | UAE | planned | |
+| 5 | Football field: eight methods, weighted recommended range, rupee DCF | TCS | Indian | ✅ | [Excel](05-football-field/TCS_Football_Field.xlsx) · [PDF](05-football-field/TCS_Football_Field.pdf) · [Notes](05-football-field/notes.md) |
+| 6 | Merger model: accretion/dilution, synergies, pro forma | Emirates NBD / Mashreqbank (hypothetical) | UAE | ✅ | [Excel](06-uae-bank-merger/ENBD_Mashreq_Merger_Model.xlsx) · [PDF](06-uae-bank-merger/ENBD_Mashreq_Merger_Model.pdf) · [Notes](06-uae-bank-merger/notes.md) |
 | 7 | Leveraged buyout with debt schedule and returns | US large-cap take-private (hypothetical) | Western | planned | |
 | 8 | Debt capacity and capital structure | Reliance Industries | Indian | planned | |
 | 9 | IPO valuation and pricing rebuild | DEWA (2022) or Saudi Aramco (2019) | UAE · Gulf | planned | |
@@ -31,9 +31,13 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 
 ## Previews
 
-| Project 1 · Apple three-statement model | Project 2 · Apple DCF | Project 3 · TCS trading comps | Project 4 · IT-services precedents | Project 5 · TCS football field |
-|---|---|---|---|---|
-| [![P1](01-apple-three-statement-model/cover.png)](01-apple-three-statement-model/Apple_3S_Model.pdf) | [![P2](02-apple-dcf/cover.png)](02-apple-dcf/Apple_DCF.pdf) | [![P3](03-tcs-trading-comps/cover.png)](03-tcs-trading-comps/TCS_Trading_Comps.pdf) | [![P4](04-precedent-transactions/cover.png)](04-precedent-transactions/IT_Services_Precedents.pdf) | [![P5](05-football-field/cover.png)](05-football-field/TCS_Football_Field.pdf) |
+| Project 1 · Apple three-statement model | Project 2 · Apple DCF | Project 3 · TCS trading comps |
+|---|---|---|
+| [![P1](01-apple-three-statement-model/cover.png)](01-apple-three-statement-model/Apple_3S_Model.pdf) | [![P2](02-apple-dcf/cover.png)](02-apple-dcf/Apple_DCF.pdf) | [![P3](03-tcs-trading-comps/cover.png)](03-tcs-trading-comps/TCS_Trading_Comps.pdf) |
+
+| Project 4 · IT-services precedents | Project 5 · TCS football field | Project 6 · ENBD / Mashreq merger |
+|---|---|---|
+| [![P4](04-precedent-transactions/cover.png)](04-precedent-transactions/IT_Services_Precedents.pdf) | [![P5](05-football-field/cover.png)](05-football-field/TCS_Football_Field.pdf) | [![P6](06-uae-bank-merger/cover.png)](06-uae-bank-merger/ENBD_Mashreq_Merger_Model.pdf) |
 
 ## Design
 
