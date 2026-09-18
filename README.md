@@ -15,10 +15,10 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 | 5 | Football field: eight methods, weighted recommended range, rupee DCF | TCS | Indian | ✅ | [Excel](05-football-field/TCS_Football_Field.xlsx) · [PDF](05-football-field/TCS_Football_Field.pdf) · [Notes](05-football-field/notes.md) |
 | 6 | Merger model: accretion/dilution, synergies, pro forma | Emirates NBD / Mashreqbank (hypothetical) | UAE | ✅ | [Excel](06-uae-bank-merger/ENBD_Mashreq_Merger_Model.xlsx) · [PDF](06-uae-bank-merger/ENBD_Mashreq_Merger_Model.pdf) · [Notes](06-uae-bank-merger/notes.md) |
 | 7 | Leveraged buyout: debt schedule, cash sweep, returns, max-price solve | Cognizant (hypothetical take-private) | Western | ✅ | [Excel](07-cognizant-lbo/Cognizant_LBO.xlsx) · [PDF](07-cognizant-lbo/Cognizant_LBO.pdf) · [Notes](07-cognizant-lbo/notes.md) |
-| 8 | Debt capacity and capital structure | Reliance Industries | Indian | planned | |
+| 8 | Debt capacity and capital structure: agency-basis leverage, capacity by rating, WACC curve, liquidity | Reliance Industries | Indian | ✅ | [Excel](08-reliance-debt-capacity/Reliance_Debt_Capacity.xlsx) · [PDF](08-reliance-debt-capacity/Reliance_Debt_Capacity.pdf) · [Notes](08-reliance-debt-capacity/notes.md) |
 | 9 | IPO valuation and pricing rebuild | DEWA (2022) or Saudi Aramco (2019) | UAE · Gulf | planned | |
-| 10 | Sum-of-the-parts | Reliance Industries | Indian | planned | |
-| 11 | Bank valuation: DDM and excess-return | Emirates NBD | UAE | planned | |
+| 10 | Sum-of-the-parts: five segments on peer multiples, market-implied Jio multiple | Reliance Industries | Indian | ✅ | [Excel](10-reliance-sotp/Reliance_SOTP.xlsx) · [PDF](10-reliance-sotp/Reliance_SOTP.pdf) · [Notes](10-reliance-sotp/notes.md) |
+| 11 | Bank valuation: DDM and excess-return forced to agree, justified P/B, market-implied ROE | Emirates NBD | UAE | ✅ | [Excel](11-enbd-bank-valuation/ENBD_Bank_Valuation.xlsx) · [PDF](11-enbd-bank-valuation/ENBD_Bank_Valuation.pdf) · [Notes](11-enbd-bank-valuation/notes.md) |
 | 12 | Energy NAV and price-deck sensitivity | Saudi Aramco | Gulf | planned | |
 | 13 | Real-estate NAV and development appraisal | Emaar Properties | UAE | planned | |
 | 14 | Quality of earnings and working-capital peg | Indian consumer company | Indian | planned | |
@@ -39,9 +39,13 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 |---|---|---|
 | [![P4](04-precedent-transactions/cover.png)](04-precedent-transactions/IT_Services_Precedents.pdf) | [![P5](05-football-field/cover.png)](05-football-field/TCS_Football_Field.pdf) | [![P6](06-uae-bank-merger/cover.png)](06-uae-bank-merger/ENBD_Mashreq_Merger_Model.pdf) |
 
-| Project 7 · Cognizant LBO | | |
+| Project 7 · Cognizant LBO | Project 8 · Reliance debt capacity | Project 10 · Reliance SOTP |
 |---|---|---|
-| [![P7](07-cognizant-lbo/cover.png)](07-cognizant-lbo/Cognizant_LBO.pdf) | | |
+| [![P7](07-cognizant-lbo/cover.png)](07-cognizant-lbo/Cognizant_LBO.pdf) | [![P8](08-reliance-debt-capacity/cover.png)](08-reliance-debt-capacity/Reliance_Debt_Capacity.pdf) | [![P10](10-reliance-sotp/cover.png)](10-reliance-sotp/Reliance_SOTP.pdf) |
+
+| Project 11 · Emirates NBD bank valuation | | |
+|---|---|---|
+| [![P11](11-enbd-bank-valuation/cover.png)](11-enbd-bank-valuation/ENBD_Bank_Valuation.pdf) | | |
 
 ## Guide
 
@@ -49,7 +53,7 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 
 ## Design
 
-Every workbook is built with `ibkit/style.py`: a brand palette per company (title bands, section headers, cover sidebar), a designed cover with contents, live key outputs and sources, print headers and footers, fit-to-width on every sheet. Inside the grid the banking convention never changes: blue inputs, black formulas, green links.
+Every workbook is built with `ibkit/style.py` (themes, cover, print setup) and, from Project 8, `ibkit/sheet.py` (a running-row-cursor helper so formulas are assembled from names, never hand-counted cells): a brand palette per company (title bands, section headers, cover sidebar), a designed cover with contents, live key outputs and sources, print headers and footers, fit-to-width on every sheet. Inside the grid the banking convention never changes: blue inputs, black formulas, green links.
 
 ## Conventions
 
