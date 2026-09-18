@@ -31,33 +31,27 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 
 ## Previews
 
-| Project 1 · Apple three-statement model | Project 2 · Apple DCF | Project 3 · TCS trading comps |
-|---|---|---|
-| [![P1](01-apple-three-statement-model/cover.png)](01-apple-three-statement-model/Apple_3S_Model.pdf) | [![P2](02-apple-dcf/cover.png)](02-apple-dcf/Apple_DCF.pdf) | [![P3](03-tcs-trading-comps/cover.png)](03-tcs-trading-comps/TCS_Trading_Comps.pdf) |
+Click any cover to open the PDF. Projects run left to right, 1 to 20.
 
-| Project 4 · IT-services precedents | Project 5 · TCS football field | Project 6 · ENBD / Mashreq merger |
-|---|---|---|
-| [![P4](04-precedent-transactions/cover.png)](04-precedent-transactions/IT_Services_Precedents.pdf) | [![P5](05-football-field/cover.png)](05-football-field/TCS_Football_Field.pdf) | [![P6](06-uae-bank-merger/cover.png)](06-uae-bank-merger/ENBD_Mashreq_Merger_Model.pdf) |
+| 1 · Apple three-statement model | 2 · Apple DCF | 3 · TCS trading comps | 4 · IT services precedents |
+|---|---|---|---|
+| [![P1](01-apple-three-statement-model/cover.png)](01-apple-three-statement-model/Apple_3S_Model.pdf) | [![P2](02-apple-dcf/cover.png)](02-apple-dcf/Apple_DCF.pdf) | [![P3](03-tcs-trading-comps/cover.png)](03-tcs-trading-comps/TCS_Trading_Comps.pdf) | [![P4](04-precedent-transactions/cover.png)](04-precedent-transactions/IT_Services_Precedents.pdf) |
 
-| Project 7 · Cognizant LBO | Project 8 · Reliance debt capacity | Project 10 · Reliance SOTP |
-|---|---|---|
-| [![P7](07-cognizant-lbo/cover.png)](07-cognizant-lbo/Cognizant_LBO.pdf) | [![P8](08-reliance-debt-capacity/cover.png)](08-reliance-debt-capacity/Reliance_Debt_Capacity.pdf) | [![P10](10-reliance-sotp/cover.png)](10-reliance-sotp/Reliance_SOTP.pdf) |
+| 5 · TCS football field | 6 · ENBD / Mashreq merger | 7 · Cognizant LBO | 8 · Reliance debt capacity |
+|---|---|---|---|
+| [![P5](05-football-field/cover.png)](05-football-field/TCS_Football_Field.pdf) | [![P6](06-uae-bank-merger/cover.png)](06-uae-bank-merger/ENBD_Mashreq_Merger_Model.pdf) | [![P7](07-cognizant-lbo/cover.png)](07-cognizant-lbo/Cognizant_LBO.pdf) | [![P8](08-reliance-debt-capacity/cover.png)](08-reliance-debt-capacity/Reliance_Debt_Capacity.pdf) |
 
-| Project 11 · Emirates NBD bank valuation | Project 13 · Emaar NAV | Project 9 · DEWA IPO rebuild |
-|---|---|---|
-| [![P11](11-enbd-bank-valuation/cover.png)](11-enbd-bank-valuation/ENBD_Bank_Valuation.pdf) | [![P13](13-emaar-nav/cover.png)](13-emaar-nav/Emaar_NAV.pdf) | [![P9](09-dewa-ipo/cover.png)](09-dewa-ipo/DEWA_IPO_Rebuild.pdf) |
+| 9 · DEWA IPO rebuild | 10 · Reliance sum of the parts | 11 · Emirates NBD bank valuation | 12 · Saudi Aramco energy NAV |
+|---|---|---|---|
+| [![P9](09-dewa-ipo/cover.png)](09-dewa-ipo/DEWA_IPO_Rebuild.pdf) | [![P10](10-reliance-sotp/cover.png)](10-reliance-sotp/Reliance_SOTP.pdf) | [![P11](11-enbd-bank-valuation/cover.png)](11-enbd-bank-valuation/ENBD_Bank_Valuation.pdf) | [![P12](12-aramco-nav/cover.png)](12-aramco-nav/Aramco_NAV.pdf) |
 
-| Project 12 · Saudi Aramco NAV | Project 15 · Salik profile and buyer screen | Project 16 · Salik pitch book |
-|---|---|---|
-| [![P12](12-aramco-nav/cover.png)](12-aramco-nav/Aramco_NAV.pdf) | [![P15](15-salik-profile/cover.png)](15-salik-profile/Salik_Profile_Buyer_Screen.pdf) | [![P16](16-salik-pitch-book/cover.png)](16-salik-pitch-book/Salik_Pitch_Book.pdf) |
+| 13 · Emaar developer NAV | 14 · Dabur quality of earnings | 15 · Salik profile and buyer screen | 16 · Salik pitch book |
+|---|---|---|---|
+| [![P13](13-emaar-nav/cover.png)](13-emaar-nav/Emaar_NAV.pdf) | [![P14](14-dabur-quality-of-earnings/cover.png)](14-dabur-quality-of-earnings/Dabur_QoE.pdf) | [![P15](15-salik-profile/cover.png)](15-salik-profile/Salik_Profile_Buyer_Screen.pdf) | [![P16](16-salik-pitch-book/cover.png)](16-salik-pitch-book/Salik_Pitch_Book.pdf) |
 
-| Project 14 · Dabur quality of earnings | Project 19 · Deal-sourcing dashboard | Project 17 · Kellanova fairness opinion |
-|---|---|---|
-| [![P14](14-dabur-quality-of-earnings/cover.png)](14-dabur-quality-of-earnings/Dabur_QoE.pdf) | [![P19](19-comps-dashboard/dashboard.png)](19-comps-dashboard/Comps_Dashboard.pdf) | [![P17](17-kellanova-fairness-opinion/cover.png)](17-kellanova-fairness-opinion/Kellanova_Fairness_Opinion.pdf) |
-
-| Project 18 · Dubai World restructuring | Project 20 · HDFC merger capstone | |
-|---|---|---|
-| [![P18](18-dubai-world-restructuring/cover.png)](18-dubai-world-restructuring/Dubai_World_Restructuring.pdf) | [![P20](20-hdfc-merger-capstone/cover.png)](20-hdfc-merger-capstone/HDFC_Merger_Capstone.pdf) | |
+| 17 · Kellanova fairness opinion | 18 · Dubai World restructuring | 19 · Deal-sourcing dashboard | 20 · HDFC merger capstone |
+|---|---|---|---|
+| [![P17](17-kellanova-fairness-opinion/cover.png)](17-kellanova-fairness-opinion/Kellanova_Fairness_Opinion.pdf) | [![P18](18-dubai-world-restructuring/cover.png)](18-dubai-world-restructuring/Dubai_World_Restructuring.pdf) | [![P19](19-comps-dashboard/cover.png)](19-comps-dashboard/Comps_Dashboard.pdf) | [![P20](20-hdfc-merger-capstone/cover.png)](20-hdfc-merger-capstone/HDFC_Merger_Capstone.pdf) |
 
 ## Guide
 
