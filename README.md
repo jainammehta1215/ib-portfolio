@@ -16,7 +16,7 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 | 6 | Merger model: accretion/dilution, synergies, pro forma | Emirates NBD / Mashreqbank (hypothetical) | UAE | ✅ | [Excel](06-uae-bank-merger/ENBD_Mashreq_Merger_Model.xlsx) · [PDF](06-uae-bank-merger/ENBD_Mashreq_Merger_Model.pdf) · [Notes](06-uae-bank-merger/notes.md) |
 | 7 | Leveraged buyout: debt schedule, cash sweep, returns, max-price solve | Cognizant (hypothetical take-private) | Western | ✅ | [Excel](07-cognizant-lbo/Cognizant_LBO.xlsx) · [PDF](07-cognizant-lbo/Cognizant_LBO.pdf) · [Notes](07-cognizant-lbo/notes.md) |
 | 8 | Debt capacity and capital structure: agency-basis leverage, capacity by rating, WACC curve, liquidity | Reliance Industries | Indian | ✅ | [Excel](08-reliance-debt-capacity/Reliance_Debt_Capacity.xlsx) · [PDF](08-reliance-debt-capacity/Reliance_Debt_Capacity.pdf) · [Notes](08-reliance-debt-capacity/notes.md) |
-| 9 | IPO valuation and pricing rebuild | DEWA (2022) or Saudi Aramco (2019) | UAE · Gulf | planned | |
+| 9 | IPO rebuild: yield, multiple and DCF against the range, book and upsizing mechanics, first-day discount, four-year record | DEWA (April 2022) | UAE | ✅ | [Excel](09-dewa-ipo/DEWA_IPO_Rebuild.xlsx) · [PDF](09-dewa-ipo/DEWA_IPO_Rebuild.pdf) · [Notes](09-dewa-ipo/notes.md) |
 | 10 | Sum-of-the-parts: five segments on peer multiples, market-implied Jio multiple | Reliance Industries | Indian | ✅ | [Excel](10-reliance-sotp/Reliance_SOTP.xlsx) · [PDF](10-reliance-sotp/Reliance_SOTP.pdf) · [Notes](10-reliance-sotp/notes.md) |
 | 11 | Bank valuation: DDM and excess-return forced to agree, justified P/B, market-implied ROE | Emirates NBD | UAE | ✅ | [Excel](11-enbd-bank-valuation/ENBD_Bank_Valuation.xlsx) · [PDF](11-enbd-bank-valuation/ENBD_Bank_Valuation.pdf) · [Notes](11-enbd-bank-valuation/notes.md) |
 | 12 | Energy NAV and price-deck sensitivity | Saudi Aramco | Gulf | planned | |
@@ -43,9 +43,9 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 |---|---|---|
 | [![P7](07-cognizant-lbo/cover.png)](07-cognizant-lbo/Cognizant_LBO.pdf) | [![P8](08-reliance-debt-capacity/cover.png)](08-reliance-debt-capacity/Reliance_Debt_Capacity.pdf) | [![P10](10-reliance-sotp/cover.png)](10-reliance-sotp/Reliance_SOTP.pdf) |
 
-| Project 11 · Emirates NBD bank valuation | Project 13 · Emaar NAV | |
+| Project 11 · Emirates NBD bank valuation | Project 13 · Emaar NAV | Project 9 · DEWA IPO rebuild |
 |---|---|---|
-| [![P11](11-enbd-bank-valuation/cover.png)](11-enbd-bank-valuation/ENBD_Bank_Valuation.pdf) | [![P13](13-emaar-nav/cover.png)](13-emaar-nav/Emaar_NAV.pdf) | |
+| [![P11](11-enbd-bank-valuation/cover.png)](11-enbd-bank-valuation/ENBD_Bank_Valuation.pdf) | [![P13](13-emaar-nav/cover.png)](13-emaar-nav/Emaar_NAV.pdf) | [![P9](09-dewa-ipo/cover.png)](09-dewa-ipo/DEWA_IPO_Rebuild.pdf) |
 
 ## Guide
 
