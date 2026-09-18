@@ -63,11 +63,13 @@ class Sheet:
         self.r += 1
         return ref
 
-    def multi(self, label, values, fmt=NUM, font=None, bold=False, border=None, first_col=None, rel=False, key=None):
+    def multi(self, label, values, fmt=NUM, font=None, bold=False, border=None, first_col=None, rel=False, key=None, note=""):
         """One label, several columns. Returns a list of refs (absolute unless rel=True)."""
         ws, r = self.ws, self.r
         c = ws.cell(r, 2, label); c.font = F_BOLD if bold else F_TEXT
         fc = first_col or self.valcol
+        if note:
+            n = ws.cell(r, self.ncols, note); n.font = F_NOTE; n.alignment = Alignment(wrap_text=True, vertical="top")
         refs = []
         for i, value in enumerate(values):
             v = ws.cell(r, fc + i, value)

@@ -21,7 +21,7 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 | 11 | Bank valuation: DDM and excess-return forced to agree, justified P/B, market-implied ROE | Emirates NBD | UAE | ✅ | [Excel](11-enbd-bank-valuation/ENBD_Bank_Valuation.xlsx) · [PDF](11-enbd-bank-valuation/ENBD_Bank_Valuation.pdf) · [Notes](11-enbd-bank-valuation/notes.md) |
 | 12 | Energy NAV under Saudi fiscal terms, price deck, dividend break-even, price-implied Brent and discount rate | Saudi Aramco | Gulf | ✅ | [Excel](12-aramco-nav/Aramco_NAV.xlsx) · [PDF](12-aramco-nav/Aramco_NAV.pdf) · [Notes](12-aramco-nav/notes.md) |
 | 13 | Real-estate NAV: backlog PV, land bank, yield-capitalised malls and hotels, residual land appraisal | Emaar Properties | UAE | ✅ | [Excel](13-emaar-nav/Emaar_NAV.xlsx) · [PDF](13-emaar-nav/Emaar_NAV.pdf) · [Notes](13-emaar-nav/notes.md) |
-| 14 | Quality of earnings and working-capital peg | Indian consumer company | Indian | planned | |
+| 14 | Quality of earnings: headline-to-adjusted EBITDA bridge, cash conversion, accruals, four-method working-capital peg | Dabur India | Indian | ✅ | [Excel](14-dabur-quality-of-earnings/Dabur_QoE.xlsx) · [PDF](14-dabur-quality-of-earnings/Dabur_QoE.pdf) · [Notes](14-dabur-quality-of-earnings/notes.md) |
 | 15 | Company profile, trading, twelve-buyer screen with live weights, sponsor vs strategic ability to pay | Salik | UAE | ✅ | [Excel](15-salik-profile/Salik_Profile_Buyer_Screen.xlsx) · [PDF](15-salik-profile/Salik_Profile_Buyer_Screen.pdf) · [Notes](15-salik-profile/notes.md) |
 | 16 | Sell-side pitch book: twelve slides on strategic alternatives for the government's stake, every number read from Project 15 | Salik | UAE | ✅ | [PDF deck](16-salik-pitch-book/Salik_Pitch_Book.pdf) · [Notes](16-salik-pitch-book/notes.md) |
 | 17 | Fairness opinion package | US public deal from a DEFM14A proxy | Western | planned | |
@@ -50,6 +50,10 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 | Project 12 · Saudi Aramco NAV | Project 15 · Salik profile and buyer screen | Project 16 · Salik pitch book |
 |---|---|---|
 | [![P12](12-aramco-nav/cover.png)](12-aramco-nav/Aramco_NAV.pdf) | [![P15](15-salik-profile/cover.png)](15-salik-profile/Salik_Profile_Buyer_Screen.pdf) | [![P16](16-salik-pitch-book/cover.png)](16-salik-pitch-book/Salik_Pitch_Book.pdf) |
+
+| Project 14 · Dabur quality of earnings | | |
+|---|---|---|
+| [![P14](14-dabur-quality-of-earnings/cover.png)](14-dabur-quality-of-earnings/Dabur_QoE.pdf) | | |
 
 ## Guide
 
