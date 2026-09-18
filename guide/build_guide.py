@@ -227,7 +227,7 @@ story.append(PageBreak())
 # PART 2 - PROJECTS
 # =========================================================================== #
 h1("Part 2 \u00b7 Project by project")
-p("Seven projects are built. Each section gives the one-line version, what it actually does, the numbers that "
+p("Twenty projects are built. Each section gives the one-line version, what it actually does, the numbers that "
   "came out, and the single thing that makes it worth showing to someone.")
 
 # --- P1
@@ -368,6 +368,243 @@ p("The genuinely useful output is not the IRR. It is the maximum price \u2014 US
   "under the share price in any sale process. And it sits 18% above where Cognizant actually trades, which "
   "says the market is pricing it below what a leveraged buyer could justify.")
 
+
+# --- P8
+h2("Project 8 \u00b7 Reliance Industries \u2014 debt capacity and capital structure")
+h3("One line: how much more could Reliance borrow, and at what rating?")
+p("A rating agency does not look at the headline leverage a company reports. It adds back leases, deferred "
+  "spectrum payments and other debt-like items, strips one-offs from EBITDA, and asks how much cash is left after "
+  "capex to service debt. The model rebuilds Reliance's FY2026 balance sheet on that basis and asks how much "
+  "capacity remains at each rating.")
+tbl([["Measure", "Result", "What it means"],
+     ["Headline net debt / EBITDA", "0.60x", "What the company reports"],
+     ["Agency-adjusted net debt / EBITDA", "1.25x", "Leases and spectrum liabilities double it"],
+     ["Cash interest cover", "5.0x", "Comfortable, but not the 8x of a decade ago"],
+     ["Capacity at an A rating", "Rs 44,272 crore", "Funds-from-operations to debt is the binding test"],
+     ["Capacity at BBB", "Rs 1,90,332 crore", "Four times more room one notch down"],
+     ["WACC today / at optimum", "12.88% / 12.84%", "Barely any saving from more debt"]],
+    [50 * mm, 40 * mm, 75 * mm], small=True)
+h3("Why it matters")
+p("The finding is that Reliance is already close to its optimal capital structure: the WACC curve is almost flat, "
+  "so extra borrowing buys almost nothing. The useful output is the rating map \u2014 which test binds at each notch \u2014 "
+  "because that is what a treasurer actually negotiates with. <b>Capacity is set by the weakest ratio, not the average.</b>")
+
+# --- P9
+h2("Project 9 \u00b7 DEWA \u2014 rebuilding a real IPO")
+h3("One line: was Dubai's largest IPO priced fairly, and what has happened since?")
+p("Takes the April 2022 flotation of Dubai's electricity and water utility and rebuilds the pricing from the "
+  "prospectus: dividend yield, EBITDA multiple and DCF against the AED 2.25\u20132.48 range, the order book, the "
+  "cornerstone investors and the upsizing from 6.5% to 18% of the company.")
+tbl([["Item", "Value"],
+     ["Priced at", "AED 2.48 \u2014 top of the range"],
+     ["Open-book demand", "AED 315bn \u2014 37x covered, reproduced"],
+     ["Cornerstones", "AED 13.8bn, 62% of the deal"],
+     ["Price versus the midpoint of three methods", "+7.6% \u2014 priced full"],
+     ["Day-one close", "AED 2.87, +15.7% \u2014 AED 3.5bn 'left on the table'"],
+     ["Total return since, per year", "6.2%, mostly dividends"]],
+    [80 * mm, 85 * mm])
+h3("Why it matters")
+p("An IPO that is 37 times covered and pops 16% looks underpriced. The model says it was priced above the "
+  "midpoint of its own valuation methods and that the pop was scarcity: cornerstones took most of the deal and "
+  "the free float was small. Four years on, the total return has been a utility's, not a growth stock's. "
+  "<b>The order book measures allocation, not value.</b>")
+
+# --- P10
+h2("Project 10 \u00b7 Reliance Industries \u2014 sum of the parts")
+h3("One line: value each Reliance business on its own peers, add them up, and see what the market is paying for Jio.")
+p("Five segments \u2014 Jio, Retail, refining and petrochemicals, oil and gas, and others \u2014 each at the multiple its "
+  "listed peers trade on, less net debt and minorities, less a holding-company discount.")
+tbl([["Segment", "Multiple", "Peer anchor"],
+     ["Jio (digital)", "12x EBITDA", "Bharti Airtel 11.6x"],
+     ["Retail", "25x", "Between Walmart and DMart"],
+     ["Refining and chemicals", "7.5x", "Indian and US refiners"],
+     ["Result", "Rs 1,065 per share", "14.5% below the market"],
+     ["Market-implied Jio multiple", "17.3x", "49% premium to Bharti"]],
+    [50 * mm, 40 * mm, 75 * mm], small=True)
+h3("Why it matters")
+p("The number to remember is not the SOTP but the implied multiple: to justify today's price the market must "
+  "value Jio at 17 times EBITDA, half again what Bharti trades on, or Retail at 37 times. That reframes the "
+  "conversation from 'is Reliance cheap' to 'is Jio worth a 49% premium to its only peer'. <b>A sum of the parts is "
+  "most useful run backwards.</b>")
+
+# --- P11
+h2("Project 11 \u00b7 Emirates NBD \u2014 valuing a bank")
+h3("One line: banks are valued on book value and return on equity, not on EBITDA, and this is the method.")
+p("A dividend-discount model and an excess-return model, which are the same thing written two ways: a bank is "
+  "worth its book value plus the present value of the returns it earns above its cost of equity. The cost of "
+  "equity is built up from the US risk-free rate, a UAE country premium and a bank beta.")
+tbl([["Item", "Value"],
+     ["Cost of equity", "10.0% (4.1% + 0.9% country + 1.0 \u00d7 5.0%)"],
+     ["Return on equity, fading 16.5% to 14%", "Long-run growth 3%"],
+     ["Value per share", "AED 41.71 against AED 30.98 \u2014 35% upside"],
+     ["ROE the price implies", "12.5%"],
+     ["Cost of equity the price implies", "11.1%"]],
+    [80 * mm, 85 * mm])
+h3("Why it matters")
+p("Either the market thinks ENBD's returns will fall to 12.5% \u2014 below anything it has earned since 2016 \u2014 or "
+  "it discounts Gulf bank equity at a rate above what a country-risk build-up gives. The second is the honest "
+  "reading, and it recurs in Project 19's bank screen. <b>For a bank, price-to-book is ROE against the cost of equity, "
+  "and nothing else.</b>")
+
+# --- P12
+h2("Project 12 \u00b7 Saudi Aramco \u2014 energy net asset value")
+h3("One line: value the barrels under the Kingdom's fiscal terms and find the oil price the share price implies.")
+p("Oil companies are valued on the cash their reserves will produce. For Aramco the state's take dominates: a "
+  "royalty that steps from 15% to 45% to 80% as Brent passes US$70 and US$100, and a 50% income tax. The model "
+  "builds a per-barrel netback under those terms, runs it over the 52-year reserve life, and then across a price deck.")
+tbl([["Item", "Value"],
+     ["Share of the barrel Aramco keeps at US$70", "33 cents \u2014 US$20.21 on US$60.62"],
+     ["Share of a marginal dollar above US$100", "10 cents"],
+     ["NAV per share at US$70, 8% discount rate", "SAR 18.06 against SAR 25.56"],
+     ["Brent the price implies at 8%", "US$118"],
+     ["Discount rate the price implies at US$70", "5.7%"],
+     ["Brent at which the base dividend is covered", "US$68.3"],
+     ["Model rebuild of FY2025 free cash flow", "Within 6% of reported"]],
+    [80 * mm, 85 * mm])
+h3("Why it matters")
+p("The shares are a claim on volume and cost, not on the oil price: above US$100 the equity gets a dime of each "
+  "dollar. The price is not an oil bet either; it implies a discount rate under 6%, which is how the market treats a "
+  "quasi-sovereign yield stock. And the dividend, not the NAV, is the live question: it needs high-sixties Brent to "
+  "be covered after a US$52bn capex programme. <b>The calibration check \u2014 rebuilding last year's cash flow \u2014 is "
+  "what earns the rest.</b>")
+
+# --- P13
+h2("Project 13 \u00b7 Emaar Properties \u2014 developer net asset value")
+h3("One line: a developer is worth its sales backlog, its rental assets and its land, not its earnings multiple.")
+p("Three blocks: the profit embedded in AED 155bn of sold-but-undelivered homes, the recurring income from malls "
+  "and hotels at a yield, and the land bank at appraised values with a 50% haircut on the cash it will take to develop.")
+tbl([["Item", "Value"],
+     ["NAV per share", "AED 20.23 against AED 11.80 \u2014 a 42% discount"],
+     ["Development block versus listed Emaar Development", "Within 4.5%"],
+     ["Residual land value implied", "AED 767 per square foot of buildable area"]],
+    [80 * mm, 85 * mm])
+h3("Why it matters")
+p("Developers trade at discounts to NAV everywhere, and the discount is the market's view of execution and cycle "
+  "risk. The cross-check against the separately listed development arm is what makes the NAV credible: the model's "
+  "value for that block lands within 5% of what the market pays for it directly. <b>When part of a sum-of-the-parts is "
+  "listed, use it as the check.</b>")
+
+# --- P14
+h2("Project 14 \u00b7 Dabur India \u2014 quality of earnings and working-capital peg")
+h3("One line: what is the business really earning, and how much working capital does it need?")
+p("The report a buyer commissions before agreeing a price. It bridges from the headline EBITDA a seller quotes to "
+  "the operating EBITDA a buyer should pay for, tests whether it turns into cash, and sets a normal level of working "
+  "capital \u2014 the peg \u2014 so the buyer pays for the business and not for whatever sits on the balance sheet on closing day.")
+tbl([["Item", "Value"],
+     ["Headline EBITDA, FY2026", "Rs 3,015 crore"],
+     ["Adjusted operating EBITDA", "Rs 2,473 crore \u2014 82% of headline"],
+     ["What the gap is", "Interest and gains on a Rs 5,148 crore treasury book"],
+     ["What the gap is worth at 20x", "Rs 10,800 crore \u2014 twice the cash pile itself"],
+     ["Payable days, FY2023 to FY2026", "126 to 157"],
+     ["Working-capital peg / closing balance", "Rs 366 crore / Rs 83 crore \u2014 buyer receives Rs 283 crore"]],
+    [80 * mm, 85 * mm])
+h3("Why it matters")
+p("Nearly a fifth of the headline EBITDA is income on cash. In a deal the cash transfers at face value; a buyer who "
+  "also capitalises its income at 20 times has paid for the same asset twice. The working-capital question is "
+  "smaller in money and larger in negotiation: whether a month of extra payable days is structural or unwinds "
+  "after completion. <b>A QoE exists to find the number that is not in the accounts.</b>")
+
+# --- P15 and P16
+h2("Projects 15 and 16 \u00b7 Salik \u2014 company profile, buyer screen and pitch book")
+h3("One line: who could own Dubai's toll operator, what could they pay, and what would you pitch to the government?")
+p("Project 15 is the groundwork: four years of financials, trading against listed toll roads, twelve candidate "
+  "buyers scored on five weighted criteria, and what a financial sponsor and a strategic operator could each pay. "
+  "Project 16 is the twelve-slide pitch book built on it, with every number read from the Project 15 workbook so "
+  "the two cannot disagree.")
+tbl([["Item", "Value"],
+     ["EV / EBITDA at the market", "20.2x \u2014 a 30% premium to the peer median"],
+     ["Price return since the 2022 IPO", "+169%"],
+     ["Top of the buyer screen", "Vinci, Brookfield, KKR, Abertis"],
+     ["Sponsor ability to pay (6x debt, 18x exit, 13% IRR)", "AED 4.66 \u2014 13% below market"],
+     ["Strategic ability to pay (7% WACC, 45-year concession)", "AED 6.05 \u2014 13% above market"],
+     ["Pitch book recommendation", "Place 10\u201315% with a sponsor-plus-sovereign anchor at a 5\u201312% premium"]],
+    [80 * mm, 85 * mm])
+h3("Why it matters")
+p("The screen's finding is who cannot buy: the government holds 75% and the regulator sets the tariff, so a "
+  "change of control is not on offer and the best operators fall down the list on consent. A sponsor cannot reach "
+  "the market price; only a strategic can justify a premium. The pitch follows the model rather than the other way "
+  "round. <b>A deck that recommends what its own appendix cannot support is the commonest failure in banking.</b>")
+
+# --- P17
+h2("Project 17 \u00b7 Kellanova / Mars \u2014 replicating a fairness opinion")
+h3("One line: take a real proxy statement and see whether the bankers' valuation ranges can be rebuilt.")
+p("When Mars bought Kellanova for US$83.50 a share, the proxy disclosed how Goldman Sachs and Lazard built their "
+  "fairness opinions: projections, discount rates, multiple ranges, premia. The model takes only what was disclosed, "
+  "back-solves the two undisclosed inputs from one range, and rebuilds the other eleven.")
+tbl([["Analysis", "Proxy range", "Rebuilt"],
+     ["Goldman DCF", "$68.42\u201383.82", "$67.79\u201383.19"],
+     ["Lazard EBITDA comparables", "$57.20\u201373.80", "$57.01\u201374.10"],
+     ["Lazard P/E comparables", "$55.90\u201375.70", "$55.86\u201375.81"],
+     ["Both advisors' premia analyses", "as disclosed", "To the cent"],
+     ["Lazard DCF", "$69.60\u201379.10", "$61.07\u201378.76 \u2014 low end not reproducible"],
+     ["Offer against twelve ranges", "", "Above 7, inside 5, below 0"]],
+    [55 * mm, 45 * mm, 65 * mm], small=True)
+h3("Why it matters")
+p("Almost every range comes back within a dollar or two from a public document. The one that does not \u2014 the "
+  "bottom of Lazard's DCF \u2014 needs a terminal cash flow close to NOPAT, which means Lazard normalised the terminal "
+  "year and the proxy did not say so. The offer was a full price: top of one DCF range, above the other, above every "
+  "trading multiple. <b>A fairness opinion is a set of defensible ranges around a price already negotiated; the "
+  "replication shows how tightly they fit.</b>")
+
+# --- P18
+h2("Project 18 \u00b7 Dubai World and Nakheel \u2014 restructuring")
+h3("One line: the Gulf's largest restructuring rebuilt as liquidity, recoveries and debt-for-equity.")
+p("In November 2009 Dubai World asked for a standstill with US$3.5bn due in three weeks against US$0.5bn of cash. "
+  "The model shows why a solvent group ran out of time, what each creditor class received in present value once "
+  "maturities were pushed out five and eight years at 1% coupons, and what the government's US$8.9bn conversion to "
+  "equity was worth.")
+tbl([["Item", "Value"],
+     ["Asset cover over the plan, forced-sale values", "0.93x with DP World, 0.47x without"],
+     ["Bank creditors' recovery, present value", "71 cents \u2014 on a 0% nominal haircut"],
+     ["Value transferred from banks by the new terms", "US$2.7bn"],
+     ["Nakheel trade creditors (40% cash, 60% 10% sukuk)", "98% \u2014 the best-treated class"],
+     ["Government recovery on its conversion, 2010 values", "48%"]],
+    [80 * mm, 85 * mm])
+h3("Why it matters")
+p("Nobody took a nominal haircut except the government, and the banks took a real one: eight years at 1% when the "
+  "market required 8% is 70 cents on the dollar, whatever the loan agreement says. Contractors who could stop the "
+  "projects did better than lenders who could only sue. <b>In a restructuring, operational leverage beats legal "
+  "seniority, and recovery is a present-value number.</b>")
+
+# --- P19
+h2("Project 19 \u00b7 Deal-sourcing dashboard")
+h3("One line: the Monday-morning tool \u2014 52 companies across five exchanges, normalised, screened, and rebuilt on demand.")
+p("A Python script rather than a workbook, because the value is in the refresh. It pulls vendor data for Gulf, "
+  "Indian and US names, converts every field in its own currency, recomputes each multiple from components, flags "
+  "what the vendor got wrong, and runs four screens into an Excel dashboard and a chart panel.")
+tbl([["Item", "Value"],
+     ["Records flagged for a data problem", "10 of 48 \u2014 one in five"],
+     ["Worst vendor error", "Infosys, HCL at 956x and 1,218x (dollars over rupees); near 10x recomputed"],
+     ["Take-private screen", "Cognizant, EPAM, Wipro"],
+     ["Banks below the justified price-to-book line", "Dubai Islamic Bank, Emirates NBD, Mashreqbank, HDFC Bank"]],
+    [70 * mm, 95 * mm])
+h3("Why it matters")
+p("A comps refresh that trusts the vendor is not a refresh. The screen that found Cognizant for Project 7 is here as "
+  "code, and a developer excluded from it because customer advances make EV/EBITDA meaningless for the sector. "
+  "<b>Knowing when a metric does not apply is most of the job.</b>")
+
+# --- P20
+h2("Project 20 \u00b7 HDFC Bank / HDFC Ltd \u2014 the capstone")
+h3("One line: replicate India's largest merger at announcement, then check what happened.")
+p("Reuses the merger toolkit from Project 6 and the bank frame from Project 11 on the April 2022 deal, then does "
+  "what a pitch never does: sets the announcement case against three years of reported results and the share price "
+  "against the bank index.")
+tbl([["Item", "Value"],
+     ["Exchange ratio and premium", "1.68x, 3.3%"],
+     ["HDFC Ltd holders' ownership / look-through share of profit, book", "41% / 42%, 47%"],
+     ["Pro forma EPS before the drag / book accretion", "\u22121.2% / +7.7%"],
+     ["Regulatory drag in year one", "Rs 4,006 crore after tax \u2014 29% of HDFC Ltd's profit"],
+     ["ROE: standalone FY2023 to FY2026", "15.7% to 12.8%"],
+     ["Total shareholder return since the day before announcement", "+3.8% against Nifty Bank +50.9%"],
+     ["Price / book, 2022 to today", "3.48x to 2.05x; implied cost of equity 9.4% to 10.1%"]],
+    [95 * mm, 70 * mm], small=True)
+h3("Why it matters")
+p("The ratio was set on market value and favoured the bank. The accretion arithmetic was right: book value per share "
+  "compounded at 12%. It was also the wrong question, because the same pro forma said ROE would fall three points, "
+  "and a bank's price is book times a multiple set by ROE. The multiple halved; the price went nowhere; the cost of "
+  "equity the market applies barely moved. <b>The de-rating was arithmetic, not sentiment \u2014 and it was visible on the "
+  "back page of the pitch.</b>")
+
 story.append(PageBreak())
 
 # =========================================================================== #
@@ -471,6 +708,38 @@ story.append(PageBreak())
 # =========================================================================== #
 # PART 4
 # =========================================================================== #
+
+h2("Projects 8 to 20")
+qa([("Why is your Aramco NAV 30% below the share price? Are you saying it is overvalued?",
+     "No. At an 8% discount rate and US$70 Brent the reserves are worth SAR 18 a share, but the same model says the "
+     "price implies a 5.7% discount rate, and that is the credible reading: the state owns most of the float and the "
+     "market treats the stock as a quasi-sovereign yield instrument. The model reports both. What I would defend is "
+     "the netback: it rebuilds Aramco's reported free cash flow within 6%."),
+    ("In the Dabur QoE you remove interest income from EBITDA. Isn't that income real?",
+     "It is real, and the buyer gets the cash that earns it at face value on closing. What the buyer should not do is "
+     "also pay a 20 times multiple for the income on cash it has just bought at one times. Removing it from EBITDA and "
+     "adding the cash to the price is the standard treatment; leaving it in double-counts Rs 5,000 crore of cash."),
+    ("Your Salik pitch recommends a minority stake, not a sale. Isn't a sale the bigger fee?",
+     "The model says no sponsor can reach the market price and the government will not sell control of a tariff-setting "
+     "asset. A pitch that recommends a sale of control would contradict its own appendix. The credible mandate is the "
+     "anchor placement with an operator partnership behind it, and a banker who pitches the deal that can happen wins "
+     "the one after it."),
+    ("You could not reproduce Lazard's DCF low end. Doesn't that undermine the replication?",
+     "It is the most useful result in it. Eleven of twelve ranges rebuild within a dollar or two. The one that does not "
+     "needs a terminal cash flow close to NOPAT rather than the projected free cash flow, which tells you Lazard "
+     "normalised the terminal year and the proxy did not disclose it. I would rather report that than force a fit."),
+    ("In Dubai World the banks got 100 cents. Why do you say 71?",
+     "Because five to eight years at a 1% coupon, when comparable paper yielded 8%, is worth 71 cents on the dollar "
+     "today whatever the face value says. The banks accepted it because regulatory accounting let them hold the paper "
+     "near par, and that is exactly why they would not take equity. Nominal recovery and economic recovery are "
+     "different numbers, and a restructuring adviser prices the second."),
+    ("HDFC Bank's merger was accretive to book and EPS. Why has the stock done nothing?",
+     "Because a bank is priced on book times a multiple set by ROE, and the merger cut ROE by three points while growing "
+     "the book. The multiple went from 3.5 to 2 times; the cost of equity the price implies barely moved. Everything the "
+     "announcement promised happened; it just was not what the price depends on. The deal will be judged on whether "
+     "deposits replace HDFC Ltd's bonds fast enough to rebuild the return.")])
+
+story.append(PageBreak())
 h1("Part 4 \u00b7 The three rules")
 p("These are what separate this repository from the hundreds of others with the same project names on them. "
   "Be able to say why each one matters.")

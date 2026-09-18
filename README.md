@@ -61,7 +61,7 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 
 ## Guide
 
-[**IB Portfolio, Explained**](guide/IB_Portfolio_Explained.pdf) — a plain-English walkthrough of every project: the vocabulary, what each model does and why, the numbers that came out, and the questions each one invites.
+[**IB Portfolio, Explained**](guide/IB_Portfolio_Explained.pdf) — a plain-English walkthrough of all twenty projects: the vocabulary, what each model does and why, the numbers that came out, and the questions each one invites.
 
 ## Design
 
