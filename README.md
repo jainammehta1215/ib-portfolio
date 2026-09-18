@@ -22,7 +22,7 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 | 12 | Energy NAV under Saudi fiscal terms, price deck, dividend break-even, price-implied Brent and discount rate | Saudi Aramco | Gulf | ✅ | [Excel](12-aramco-nav/Aramco_NAV.xlsx) · [PDF](12-aramco-nav/Aramco_NAV.pdf) · [Notes](12-aramco-nav/notes.md) |
 | 13 | Real-estate NAV: backlog PV, land bank, yield-capitalised malls and hotels, residual land appraisal | Emaar Properties | UAE | ✅ | [Excel](13-emaar-nav/Emaar_NAV.xlsx) · [PDF](13-emaar-nav/Emaar_NAV.pdf) · [Notes](13-emaar-nav/notes.md) |
 | 14 | Quality of earnings and working-capital peg | Indian consumer company | Indian | planned | |
-| 15 | Company profile and buyer screen | Salik | UAE | planned | |
+| 15 | Company profile, trading, twelve-buyer screen with live weights, sponsor vs strategic ability to pay | Salik | UAE | ✅ | [Excel](15-salik-profile/Salik_Profile_Buyer_Screen.xlsx) · [PDF](15-salik-profile/Salik_Profile_Buyer_Screen.pdf) · [Notes](15-salik-profile/notes.md) |
 | 16 | Full sell-side pitch book | Salik | UAE | planned | |
 | 17 | Fairness opinion package | US public deal from a DEFM14A proxy | Western | planned | |
 | 18 | Restructuring: liquidity, waterfall, debt-for-equity | Documented GCC or US case | UAE · Western | planned | |
@@ -47,9 +47,9 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 |---|---|---|
 | [![P11](11-enbd-bank-valuation/cover.png)](11-enbd-bank-valuation/ENBD_Bank_Valuation.pdf) | [![P13](13-emaar-nav/cover.png)](13-emaar-nav/Emaar_NAV.pdf) | [![P9](09-dewa-ipo/cover.png)](09-dewa-ipo/DEWA_IPO_Rebuild.pdf) |
 
-| Project 12 · Saudi Aramco NAV | | |
+| Project 12 · Saudi Aramco NAV | Project 15 · Salik profile and buyer screen | |
 |---|---|---|
-| [![P12](12-aramco-nav/cover.png)](12-aramco-nav/Aramco_NAV.pdf) | | |
+| [![P12](12-aramco-nav/cover.png)](12-aramco-nav/Aramco_NAV.pdf) | [![P15](15-salik-profile/cover.png)](15-salik-profile/Salik_Profile_Buyer_Screen.pdf) | |
 
 ## Guide
 
