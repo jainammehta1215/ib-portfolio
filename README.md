@@ -27,7 +27,7 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 | 17 | Fairness opinion replication from the DEFM14A: twelve advisor analyses rebuilt from disclosed inputs and tested against the proxy's ranges | Kellanova / Mars (Goldman Sachs, Lazard) | Western | ✅ | [Excel](17-kellanova-fairness-opinion/Kellanova_Fairness_Opinion.xlsx) · [PDF](17-kellanova-fairness-opinion/Kellanova_Fairness_Opinion.pdf) · [Notes](17-kellanova-fairness-opinion/notes.md) |
 | 18 | Restructuring: the 2009 liquidity gap, asset cover over the plan, PV recoveries by creditor class, the government's debt-for-equity | Dubai World and Nakheel, 2010–11 | UAE | ✅ | [Excel](18-dubai-world-restructuring/Dubai_World_Restructuring.xlsx) · [PDF](18-dubai-world-restructuring/Dubai_World_Restructuring.pdf) · [Notes](18-dubai-world-restructuring/notes.md) |
 | 19 | Deal-sourcing and comps-refresh tool: 52 names normalised to US$, multiples recomputed and vendor errors flagged, four screens, `--refresh` | DFM · ADX · Tadawul · NSE · US | All | ✅ | [Script](19-comps-dashboard/dashboard.py) · [Excel](19-comps-dashboard/Comps_Dashboard.xlsx) · [PDF](19-comps-dashboard/Comps_Dashboard.pdf) · [Notes](19-comps-dashboard/notes.md) |
-| 20 | Capstone: live-deal replication | HDFC Bank – HDFC Ltd merger | Indian | planned | |
+| 20 | Capstone: the merger replicated at announcement (look-through contribution, accretion, regulatory drag) and judged three years on against reported results and Nifty Bank | HDFC Bank – HDFC Ltd | Indian | ✅ | [Excel](20-hdfc-merger-capstone/HDFC_Merger_Capstone.xlsx) · [PDF](20-hdfc-merger-capstone/HDFC_Merger_Capstone.pdf) · [Notes](20-hdfc-merger-capstone/notes.md) |
 
 ## Previews
 
@@ -55,9 +55,9 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 |---|---|---|
 | [![P14](14-dabur-quality-of-earnings/cover.png)](14-dabur-quality-of-earnings/Dabur_QoE.pdf) | [![P19](19-comps-dashboard/dashboard.png)](19-comps-dashboard/Comps_Dashboard.pdf) | [![P17](17-kellanova-fairness-opinion/cover.png)](17-kellanova-fairness-opinion/Kellanova_Fairness_Opinion.pdf) |
 
-| Project 18 · Dubai World restructuring | | |
+| Project 18 · Dubai World restructuring | Project 20 · HDFC merger capstone | |
 |---|---|---|
-| [![P18](18-dubai-world-restructuring/cover.png)](18-dubai-world-restructuring/Dubai_World_Restructuring.pdf) | | |
+| [![P18](18-dubai-world-restructuring/cover.png)](18-dubai-world-restructuring/Dubai_World_Restructuring.pdf) | [![P20](20-hdfc-merger-capstone/cover.png)](20-hdfc-merger-capstone/HDFC_Merger_Capstone.pdf) | |
 
 ## Guide
 
