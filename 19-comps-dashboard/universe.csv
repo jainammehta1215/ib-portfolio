@@ -1,0 +1,53 @@
+ticker,name,region,sector,financial
+EMAAR.AE,Emaar Properties,UAE,Real estate,0
+EMAARDEV.AE,Emaar Development,UAE,Real estate,0
+ALDAR.AE,Aldar Properties,UAE,Real estate,0
+SALIK.AE,Salik,UAE,Infrastructure,0
+DEWA.AE,DEWA,UAE,Utilities,0
+TABREED.AE,Tabreed,UAE,Utilities,0
+EMPOWER.AE,Empower,UAE,Utilities,0
+EAND.AE,e& (Etisalat),UAE,Telecom,0
+DU.AE,du,UAE,Telecom,0
+EMIRATESNBD.AE,Emirates NBD,UAE,Banks,1
+FAB.AE,First Abu Dhabi Bank,UAE,Banks,1
+ADCB.AE,ADCB,UAE,Banks,1
+DIB.AE,Dubai Islamic Bank,UAE,Banks,1
+MASQ.AE,Mashreqbank,UAE,Banks,1
+2222.SR,Saudi Aramco,Gulf,Energy,0
+5110.SR,Saudi Electricity,Gulf,Utilities,0
+1120.SR,Al Rajhi Bank,Gulf,Banks,1
+RELIANCE.NS,Reliance Industries,India,Energy,0
+ONGC.NS,ONGC,India,Energy,0
+BPCL.NS,BPCL,India,Energy,0
+TCS.NS,TCS,India,IT services,0
+INFY.NS,Infosys,India,IT services,0
+HCLTECH.NS,HCL Technologies,India,IT services,0
+WIPRO.NS,Wipro,India,IT services,0
+BHARTIARTL.NS,Bharti Airtel,India,Telecom,0
+DABUR.NS,Dabur,India,Consumer,0
+HINDUNILVR.NS,Hindustan Unilever,India,Consumer,0
+MARICO.NS,Marico,India,Consumer,0
+BRITANNIA.NS,Britannia,India,Consumer,0
+DMART.NS,Avenue Supermarts,India,Retail,0
+TRENT.NS,Trent,India,Retail,0
+IRB.NS,IRB Infrastructure,India,Infrastructure,0
+HDFCBANK.NS,HDFC Bank,India,Banks,1
+ICICIBANK.NS,ICICI Bank,India,Banks,1
+KOTAKBANK.NS,Kotak Mahindra Bank,India,Banks,1
+AAPL,Apple,US,Technology,0
+MSFT,Microsoft,US,Technology,0
+CTSH,Cognizant,US,IT services,0
+ACN,Accenture,US,IT services,0
+EPAM,EPAM Systems,US,IT services,0
+XOM,ExxonMobil,US,Energy,0
+CVX,Chevron,US,Energy,0
+VLO,Valero,US,Energy,0
+WMT,Walmart,US,Retail,0
+COST,Costco,US,Retail,0
+TGT,Target,US,Retail,0
+DUK,Duke Energy,US,Utilities,0
+ED,Consolidated Edison,US,Utilities,0
+T,AT&T,US,Telecom,0
+VZ,Verizon,US,Telecom,0
+JPM,JPMorgan Chase,US,Banks,1
+BAC,Bank of America,US,Banks,1

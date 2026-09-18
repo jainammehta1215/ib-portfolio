@@ -51,9 +51,9 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 |---|---|---|
 | [![P12](12-aramco-nav/cover.png)](12-aramco-nav/Aramco_NAV.pdf) | [![P15](15-salik-profile/cover.png)](15-salik-profile/Salik_Profile_Buyer_Screen.pdf) | [![P16](16-salik-pitch-book/cover.png)](16-salik-pitch-book/Salik_Pitch_Book.pdf) |
 
-| Project 14 · Dabur quality of earnings | | |
+| Project 14 · Dabur quality of earnings | Project 19 · Deal-sourcing dashboard | |
 |---|---|---|
-| [![P14](14-dabur-quality-of-earnings/cover.png)](14-dabur-quality-of-earnings/Dabur_QoE.pdf) | | |
+| [![P14](14-dabur-quality-of-earnings/cover.png)](14-dabur-quality-of-earnings/Dabur_QoE.pdf) | [![P19](19-comps-dashboard/dashboard.png)](19-comps-dashboard/Comps_Dashboard.pdf) | |
 
 ## Guide
 
