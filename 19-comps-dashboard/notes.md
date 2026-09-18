@@ -13,7 +13,7 @@ The other projects are models of one company. This one is the tool a coverage de
 | | |
 |---|---|
 | Universe · usable records | 52 · 48 (four ADX tickers return no vendor record) |
-| Records flagged for a data problem | **11** — roughly one name in five |
+| Records flagged for a data problem | **10** — roughly one name in five |
 | Currency mismatches (financials in one currency, price in another) | Infosys, HCL Technologies: vendor EV/EBITDA reads **956× and 1,218×**; recomputed **~10×** |
 | Vendor multiples disagreeing with components by more than 25% | Emaar Properties and others where cash and debt are stale |
 | **Take-private screen** (below sector median, FCF yield > 6%, net debt < 1.5× EBITDA) | **Cognizant, EPAM Systems, Wipro** |

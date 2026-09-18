@@ -24,9 +24,9 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 | 14 | Quality of earnings: headline-to-adjusted EBITDA bridge, cash conversion, accruals, four-method working-capital peg | Dabur India | Indian | ✅ | [Excel](14-dabur-quality-of-earnings/Dabur_QoE.xlsx) · [PDF](14-dabur-quality-of-earnings/Dabur_QoE.pdf) · [Notes](14-dabur-quality-of-earnings/notes.md) |
 | 15 | Company profile, trading, twelve-buyer screen with live weights, sponsor vs strategic ability to pay | Salik | UAE | ✅ | [Excel](15-salik-profile/Salik_Profile_Buyer_Screen.xlsx) · [PDF](15-salik-profile/Salik_Profile_Buyer_Screen.pdf) · [Notes](15-salik-profile/notes.md) |
 | 16 | Sell-side pitch book: twelve slides on strategic alternatives for the government's stake, every number read from Project 15 | Salik | UAE | ✅ | [PDF deck](16-salik-pitch-book/Salik_Pitch_Book.pdf) · [Notes](16-salik-pitch-book/notes.md) |
-| 17 | Fairness opinion package | US public deal from a DEFM14A proxy | Western | planned | |
+| 17 | Fairness opinion replication from the DEFM14A: twelve advisor analyses rebuilt from disclosed inputs and tested against the proxy's ranges | Kellanova / Mars (Goldman Sachs, Lazard) | Western | ✅ | [Excel](17-kellanova-fairness-opinion/Kellanova_Fairness_Opinion.xlsx) · [PDF](17-kellanova-fairness-opinion/Kellanova_Fairness_Opinion.pdf) · [Notes](17-kellanova-fairness-opinion/notes.md) |
 | 18 | Restructuring: liquidity, waterfall, debt-for-equity | Documented GCC or US case | UAE · Western | planned | |
-| 19 | Deal-sourcing and comps-refresh dashboard (Python) | DFM, NSE and US universes | All | planned | |
+| 19 | Deal-sourcing and comps-refresh tool: 52 names normalised to US$, multiples recomputed and vendor errors flagged, four screens, `--refresh` | DFM · ADX · Tadawul · NSE · US | All | ✅ | [Script](19-comps-dashboard/dashboard.py) · [Excel](19-comps-dashboard/Comps_Dashboard.xlsx) · [PDF](19-comps-dashboard/Comps_Dashboard.pdf) · [Notes](19-comps-dashboard/notes.md) |
 | 20 | Capstone: live-deal replication | HDFC Bank – HDFC Ltd merger | Indian | planned | |
 
 ## Previews
@@ -51,9 +51,9 @@ Every workbook opens in Excel or Google Sheets; every PDF is the print of the ke
 |---|---|---|
 | [![P12](12-aramco-nav/cover.png)](12-aramco-nav/Aramco_NAV.pdf) | [![P15](15-salik-profile/cover.png)](15-salik-profile/Salik_Profile_Buyer_Screen.pdf) | [![P16](16-salik-pitch-book/cover.png)](16-salik-pitch-book/Salik_Pitch_Book.pdf) |
 
-| Project 14 · Dabur quality of earnings | Project 19 · Deal-sourcing dashboard | |
+| Project 14 · Dabur quality of earnings | Project 19 · Deal-sourcing dashboard | Project 17 · Kellanova fairness opinion |
 |---|---|---|
-| [![P14](14-dabur-quality-of-earnings/cover.png)](14-dabur-quality-of-earnings/Dabur_QoE.pdf) | [![P19](19-comps-dashboard/dashboard.png)](19-comps-dashboard/Comps_Dashboard.pdf) | |
+| [![P14](14-dabur-quality-of-earnings/cover.png)](14-dabur-quality-of-earnings/Dabur_QoE.pdf) | [![P19](19-comps-dashboard/dashboard.png)](19-comps-dashboard/Comps_Dashboard.pdf) | [![P17](17-kellanova-fairness-opinion/cover.png)](17-kellanova-fairness-opinion/Kellanova_Fairness_Opinion.pdf) |
 
 ## Guide
 
