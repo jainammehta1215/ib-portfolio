@@ -1,5 +1,8 @@
 # IB Portfolio — Jainam Mehta
 
+Built by **Jainam Mehta** — [site](https://jainammehta1215.github.io) · [resume (PDF)](https://jainammehta1215.github.io/Jainam_Mehta_Resume.pdf) · [LinkedIn](https://www.linkedin.com/in/jainammehta1215) · mehtajainam1215@gmail.com
+
+
 Investment-banking analyses built the way an analyst builds them: Excel models with live formulas and a checks sheet, PDF prints, and a notes page per project that says what was done, what it shows and what I would change. Companies are a mix of Western, Indian and UAE/Gulf large caps. All data is public (SEC EDGAR, company annual reports, exchange disclosures, Yahoo Finance, FRED, Damodaran).
 
 Every workbook opens in Excel or Google Sheets; every PDF is the print of the key sheets for anyone who won't open a spreadsheet.
